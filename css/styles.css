@@ -6,6 +6,7 @@
   --primery-bcg: #ffffff;
   --btn-background: #404bbf;
   --light-background: #f4f4fd;
+  --subtle-text-color: #8e8f99;
 }
 
 body {
@@ -27,28 +28,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-.headerpage {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--accent);
-}
-.headerpage-logo {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-  color: var(--primary-brand);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin-right: 76px;
-}
-
-.headerpage-logo-end {
-  color: var(--dark);
-}
-
 .list {
   list-style: none;
   padding-left: 0;
@@ -74,11 +53,33 @@ button {
   margin: 0 auto;
 }
 
+/* ----------HEADER---------- */
+.headerpage {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--accent);
+}
 .headerpage-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.headerpage-logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  color: var(--primary-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-right: 76px;
+}
+
+.headerpage-logo-end {
+  color: var(--dark);
+}
+
 .contacts {
   font-style: normal;
 }
@@ -124,12 +125,19 @@ button {
 .list-contacts-item:focus {
   color: var(--btn-background);
 }
-
+/* ----------HERO---------- */
 .hero {
   background-color: var(--dark);
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
+
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .hero-text {
   font-weight: 700;
@@ -162,6 +170,7 @@ button {
 .hero-btn:focus {
   background-color: var(--btn-background);
 }
+/* ----------Sections---------- */
 .section-examples.section {
   padding-top: 0;
 }
@@ -189,7 +198,7 @@ button {
   margin-bottom: 72px;
   padding-top: 0;
 }
-
+/* ----------Features---------- */
 .features-list {
   display: flex;
   gap: 24px;
@@ -199,12 +208,19 @@ button {
   flex-basis: calc((100% - (3 * 24px)) / 4);
 }
 
+.icon {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  background-color: var(--light-background);
+}
 .section-examples-list {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
 }
-
+/* ----------Our Team---------- */
 .section-team-list {
   display: flex;
   gap: 24px;
@@ -213,15 +229,59 @@ button {
 }
 .section-team-card {
   flex-basis: calc((100% - (3 * 24px)) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 .section-team-card-bottom {
   background: var(--primery-bcg);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
   padding: 32px 16px;
 }
 
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--btn-background);
+}
+.team-soc-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-brand);
+  border-radius: 50%;
+}
+.team-soc-icon {
+  fill: var(--light-background);
+}
+.section-team {
+  background-color: var(--light-background);
+}
+/* ----------Customers---------- */
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.customers-link {
+  display: block;
+  border: 1px solid var(--subtle-text-color);
+  border-radius: 4px;
+  fill: var(--subtle-text-color);
+  padding: 16px 32px;
+}
+.customers-link:hover,
+.customers-link:focus {
+  fill: var(--btn-background);
+  border-color: var(--btn-background);
+}
+
+/* ----------Portfolio---------- */
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
@@ -244,6 +304,27 @@ button {
   justify-content: center;
   margin-bottom: 72px;
 }
+.filters-list-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--primary-brand);
+  background-color: var(--light-background);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 12px 24px;
+  border: 0px;
+}
+
+.filters-list-btn:hover,
+.filters-list-btn:focus {
+  color: var(--primery-bcg);
+  background-color: var(--btn-background);
+}
+
+/* ----------Footer---------- */
 .footerpage {
   background-color: var(--dark);
   padding-top: 100px;
@@ -271,27 +352,4 @@ button {
   color: var(--light-background);
   margin-top: 16px;
   width: 264px;
-}
-.section-team {
-  background-color: var(--light-background);
-}
-.filters-list-btn {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--primary-brand);
-  background-color: var(--light-background);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  padding: 12px 24px;
-  border: 0px;
-}
-
-.filters-list-btn:hover,
-.filters-list-btn:focus {
-  color: var(--primery-bcg);
-  background-color: var(--btn-background);
 }
