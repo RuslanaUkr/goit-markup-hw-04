@@ -215,6 +215,7 @@ button {
   padding-bottom: 24px;
   padding-top: 24px;
   background-color: var(--light-background);
+  margin-bottom: 8px;
 }
 .section-examples-list {
   display: flex;
